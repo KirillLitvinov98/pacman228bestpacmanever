@@ -1,0 +1,772 @@
+from tkinter import *
+from random import *
+
+list_up = []
+for i in range(30,550,10):
+    list_up.append([i,30])
+for i in range(40,130,10):
+    list_up.append([i,90])
+for i in range(450,540,10):
+    list_up.append([i,90])
+for i in range(190,390,10):
+    if i == 240 or i == 330:
+        continue
+    else:
+        list_up.append([i,150])
+for i in range(130,450,10):
+    if i == 270 or i == 280 or i == 290 or i == 300:
+        continue
+    else:
+        list_up.append([i,210])
+for i in range(0,120,10):
+    list_up.append([i,270])
+for i in range(460,580,10):
+    list_up.append([i,270])
+for i in range(190,390,10):
+    list_up.append([i,330])
+for i in range(190,390,10):
+    list_up.append([i,390])
+for i in range(30,550,10):
+    if i == 120 or i == 180 or i == 240 or i == 330 or i == 390 or i == 450:
+        continue
+    else:
+        list_up.append([i,480])
+for i in range(40,540,10):
+    if i == 270 or i == 280 or i == 290 or i == 300:
+        continue
+    else:
+        list_up.append([i,540])
+    
+list_left = []
+for i in range(30,100,10):
+    list_left.append([30,i])
+for i in range(480,550,10):
+    list_left.append([30,i])
+for i in range(100,480,10):
+    if i == 270:
+        continue
+    else:
+        list_left.append([120,i])
+for i in range(40,480,10):
+    if i == 160 or i == 170 or i == 180 or i == 190 or i == 200 or i == 210:
+        continue
+    else:
+        list_left.append([180,i])
+for i in range(40,150,10):
+    list_left.append([240,i])
+for i in range(400,480,10):
+    list_left.append([240,i])
+for i in range(160,280,10):
+    if i == 210:
+        continue
+    else:
+        list_left.append([270,i])
+for i in range(490,540,10):
+    list_left.append([270,i])
+for i in range(470,410,10):
+    list_left.append([330,i])
+for i in range(30,150,10):
+    list_left.append([330,i])
+for i in range(40,480,10):
+    if i == 150 or i == 160 or i == 170 or i == 180 or i == 190 or i == 200 or i == 210 or i == 330 or i == 390:
+        continue
+    else:
+        list_left.append([390,i])
+for i in range(90,480,10):
+    if i == 210:
+        continue
+    else:
+        list_left.append([450,i])
+for i in range(40,90,10):
+    list_left.append([540,i])
+for i in range(490,540,10):
+    list_left.append([540,i])
+
+list_down = []
+for i in range(60,580,10):
+    list_down.append([i,570])
+for i in range(70,570,10):
+    if i == 300 or i == 310 or i == 320 or i == 330:
+        continue
+    else:
+        list_down.append([i,510])
+for i in range(220,420,10):
+    if i == 270 or i == 360:
+        continue
+    else:
+        list_down.append([i,420])
+for i in range(220,420,10):
+    list_down.append([i,360])
+for i in range(30,150,10):
+    list_down.append([i,300])
+for i in range(300,340,10):
+    list_down.append([i,300])
+for i in range(490,610,10):
+    list_down.append([i,300])
+for i in range(160,480,10):
+    if i == 210 or i == 300 or i == 310 or i == 320 or i == 330 or i == 420:
+        continue
+    else:
+        list_down.append([i,240])
+for i in range(210,430,10):
+    if i == 300 or i == 310 or i == 320 or i == 330:
+        continue
+    else:
+        list_down.append([i,180])
+for i in range(60,150,10):
+    list_down.append([i,120])
+for i in range(490,580,10):
+    list_down.append([i,120])
+for i in range(70,270,10):
+    if i == 210:
+        continue
+    else:
+        list_down.append([i,60])
+for i in range(370,570,10):
+    if i == 420:
+        continue
+    else:
+        list_down.append([i,60])
+
+list_right = []
+for i in range(70,120,10):
+    list_right.append([60,i])
+for i in range(520,570,10):
+    list_right.append([60,i])
+for i in range(120,510,10):
+    if i == 240:
+        continue
+    else:
+        list_right.append([150,i])
+for i in range(70,360):
+    if i == 180 or i == 190 or i == 200 or i == 210 or i == 220 or i == 230 or i == 240:
+        continue
+    else:
+        list_right.append([210,i])
+for i in range(370,510,10):
+    if i == 420:
+        continue
+    else:
+        list_right.append([210,i])
+for i in range(60,180,10):
+    list_right.append([270,i])
+for i in range(430,510,10):
+    list_right.append([270,i])
+for i in range(190,310,10):
+    if i == 240:
+        continue
+    else:
+        list_right.append([330,i])
+for i in range(70,180,10):
+    list_right.append([360,i])
+for i in range(430,510,10):
+    list_right.append([360,i])
+for i in range(70,510,10):
+    if i == 190 or i == 200 or i == 210 or i == 220 or i == 230 or i == 240:
+        continue
+    else:
+        list_right.append([420,i])
+for i in range(130,510,10):
+    if i == 300:
+        continue
+    else:
+        list_right.append([480,i])
+for i in range(60,130,10):
+    list_right.append([570,i])
+for i in range(510,580,10):
+    list_right.append([570,i])
+for i in range(520,570,10):
+    list_right.append([330,i])
+
+full_list_coords = [[270,210,300,240],[180,210,210,240],[180,330,210,360],[300,210,330,240],[270,150,300,180],[300,150,330,180],
+                    [240,150,270,180],[330,150,360,180],[400,30,430,60],[180,30,210,60],[180,150,210,180],[390,150,420,180],
+                    [240,30,270,60],[330,30,360,60],[30,30,60,60],[450,90,480,120],[120,90,150,120],[540,30,570,60],
+                    [540,90,570,120],[30,90,60,120],[120,210,150,240],[120,480,150,510],
+                    [120,480,150,510],[180,480,210,510],[240,480,270,510],[330,480,360,510],[390,480,420,510],[270,540,300,570],[300,540,330,570],[450,480,480,510],
+                    [240,390,270,420],[330,390,360,420],[300,480,330,510],[270,480,300,510],[390,210,420,240],
+                    [390,390,420,420],[390,330,420,360],[450,210,480,240],
+                    [30,480,60,510],[30,540,60,570],[540,480,570,510],[540,540,570,570],[390,30,420,60],[180,390,210,420],[390,390,420,420]]
+
+a = 0
+
+def close_():
+    root.destroy()
+
+
+def tick_up_1():
+    global a
+    if a == 1 or a == 3 or a == 2:
+        pass
+    else:
+        root.after(150,tick_up_2)
+        c1.itemconfig(circle,start = 130)
+        c1.itemconfig(circle,extent = 280)
+
+def tick_up_2():
+    global a
+    if a == 1 or a == 3 or a == 2:
+        pass
+    else:
+        root.after(150,tick_up_1)
+        c1.itemconfig(circle,start = 130)
+        c1.itemconfig(circle,extent = 359)
+
+def tick_down_1():
+    global a
+    if a == 1 or a == 2 or a == 4:
+        pass
+    else:
+        root.after(150,tick_down_2)
+        c1.itemconfig(circle,start = 310)
+        c1.itemconfig(circle,extent = 280)
+
+def tick_down_2():
+    global a
+    if a == 1 or a == 2 or a == 4:
+        pass
+    else:
+        root.after(150,tick_down_1)
+        c1.itemconfig(circle,start = 310)
+        c1.itemconfig(circle,extent = 359)
+
+def tick_left_1():
+    global a
+    if a == 1 or a == 3 or a == 4:
+        pass
+    else:
+        root.after(140,tick_left_2)
+        c1.itemconfig(circle,start = 220)
+        c1.itemconfig(circle,extent = 280)
+    
+
+def tick_left_2():
+    global a
+    if a == 1 or a == 3 or a == 4:
+        pass
+    else:
+        root.after(140,tick_left_1)
+        c1.itemconfig(circle,start = 220)
+        c1.itemconfig(circle,extent = 359)
+    
+
+def tick_right_1():
+    global a
+    if a == 2 or a == 3 or a == 4:
+        pass
+    else:
+        root.after(140,tick_right_2)
+        c1.itemconfig(circle,start = 0)
+        c1.itemconfig(circle,extent = 359)
+
+def tick_right_2():
+    global a
+    if a == 2 or a == 3 or a == 4:
+        pass
+    else:
+        root.after(140,tick_right_1)
+        c1.itemconfig(circle,start = 40)
+        c1.itemconfig(circle,extent = 280)
+
+
+def keypress(event):
+    global a
+    global list_up
+    global list_left
+    global list_down
+    global list_right
+    if event.keycode == 38:
+        if a == 4:
+            if c1.coords(circle)[0:2] in list_up:
+                pass
+            else:
+                c1.move(circle, 0, -10)
+            
+        else:
+            if c1.coords(circle)[0:2] in list_up:
+                pass
+            else:
+                a = 4
+                c1.move(circle, 0, -10)
+            
+                tick_up_1()
+    elif event.keycode == 40:
+        if a == 3:
+            if c1.coords(circle)[2:] in list_down:
+                pass
+            else:
+             
+                c1.move(circle, 0, 10)
+        else:
+            if c1.coords(circle)[2:] in list_down:
+                pass
+            else:
+          
+                a = 3
+                c1.move(circle, 0 ,10)
+                tick_down_1()
+
+    elif event.keycode == 37:
+        if a == 2:
+            if c1.coords(circle)[0:2] in list_left:
+                pass
+            else:
+              
+                c1.move(circle, -10, 0)
+        else:
+            if c1.coords(circle)[0:2] in list_left:
+                pass
+            else:
+ 
+                a = 2
+                c1.move(circle, -10, 0)
+                tick_left_1()
+    elif event.keycode == 39:
+        if a == 1:
+            if c1.coords(circle)[2:] in list_right:
+                pass
+            else:
+                c1.move(circle, 10, 0)
+
+        else:
+            if c1.coords(circle)[2:] in list_right:
+                pass
+            else:
+                a = 1
+                c1.move(circle,10,0)
+                tick_right_1()
+                
+count_check = 0
+count = 0
+def points():
+    global text
+    global count
+    global c1
+    fin = c1.find_withtag('ball')
+    x1,y1,x2,y2 = c1.bbox(circle)
+    overlap = c1.find_overlapping(x1,y1,x2,y2)
+    for i in overlap:
+        for j in fin:
+            if i == j:
+                c1.delete(i)
+                count += 10
+    c2.delete(text)
+    text = c2.create_text(300,20,text = 'Счет:'+str(count),fill='#0000CD',font="Purisa")
+    if count == 1630:
+        text2 = c1.create_text(300,300, text = 'Вы выиграли!!!', fill = 'red',tag = 'text2',font="Purisa")
+        c1.tag_raise(text2)
+        root.after(1000,close_)
+
+def movement(event):
+    global count_check
+    global circle
+    if c1.coords(circle) == [-30,270,0,300]:
+        circle = c1.create_arc(610,270,640,300, start = 40, extent = 280, outline = 'yellow', fill = 'yellow', width = 1, tag = 'pacman')
+    elif c1.coords(circle) == [610,270,640,300]:
+        circle = c1.create_arc(-30,270,0,300, start = 40, extent = 280, outline = 'yellow', fill = 'yellow', width = 1, tag = 'pacman')
+    if count_check != 1:
+        points()
+    else:
+        pass
+    keypress(event)
+
+root = Tk()
+root.title('Pacman')
+root.geometry('600x650+450+120')
+root.resizable(0,0)
+
+# lines
+c1 = Canvas(root, width = 600, height = 600, cursor = 'arrow', bg = 'black')
+c2 = Canvas(root, width = 600, height = 50, cursor = 'arrow', bg = 'black')
+line1 = c1.create_line(0,0,600,0, width = '60', fill = '#0000CD', tag = 'line_up')
+line2 = c1.create_rectangle(0,0,30,270, fill = '#0000CD', outline = '#0000CD')
+line2 = c1.create_rectangle(0,300,30,600, fill = '#0000CD', outline = '#0000CD')
+line3 = c1.create_rectangle(570,0,600,270, fill = '#0000CD', outline = '#0000CD')
+line3 = c1.create_rectangle(570,300,600,600, fill = '#0000CD', outline = '#0000CD')
+line4 = c1.create_line(0,600,600,600, width = '60', fill = '#0000CD', tag = 'line_down')
+
+#count
+text = c2.create_text(55,20,text = 'Счет:'+str(count),fill='#0000CD',font="Purisa",tag = 'text_id')
+
+# left side
+rect2 = c1.create_rectangle(0,120,120,270,fill = '#0000CD', outline = '#0000CD')
+rect3 = c1.create_rectangle(0,300,120,480, fill = '#0000CD', outline = '#0000CD')
+
+#bottom lines
+rect4 = c1.create_rectangle(60,510,270,540, fill = '#0000CD', outline = '#0000CD')
+rect5 = c1.create_rectangle(330,510,540,540, fill = '#0000CD', outline = '#0000CD')
+
+#right side
+rect6 = c1.create_rectangle(480,300,600,480,fill = '#0000CD',outline = '#0000CD')
+rect7 = c1.create_rectangle(480,120,600,270,fill = '#0000CD',outline = '#0000CD')
+
+#center
+rect_center = c1.create_polygon(210,240,210,330,390,330,390,240,330,240,330,300,270,300,270,240,fill = '#0000CD',outline = '#0000CD')
+
+# top line
+rect9 = c1.create_rectangle(270,30,330,150,fill = '#0000CD', outline = '#0000CD')
+
+#left snake
+
+rect228 = c1.create_polygon(60,60,60,90,150,90,150,210,270,210,270,180,180,180,180,60,fill = '#0000CD',outline = '#0000CD')
+
+#left square
+rect13 = c1.create_rectangle(210,60,240,150,fill = '#0000CD',outline = '#0000CD')
+
+#right square
+rect14 = c1.create_rectangle(360,60,390,150,fill = '#0000CD',outline = '#0000CD')
+
+
+#right snake
+rect228 = c1.create_polygon(540,60,420,60,420,180,330,180,330,210,450,210,450,90,540,90,fill = '#0000CD',outline = '#0000CD')
+
+#bottom
+rect19 = c1.create_rectangle(210,360,390,390,fill = '#0000CD',outline = '#0000CD')
+rect20 = c1.create_rectangle(210,420,240,480,fill = '#0000CD',outline = '#0000CD')
+rect20 = c1.create_rectangle(270,420,330,480,fill = '#0000CD',outline = '#0000CD')
+rect20 = c1.create_rectangle(360,420,390,480,fill = '#0000CD',outline = '#0000CD')
+#left long_square
+rect21 = c1.create_rectangle(150,240,180,480,fill = '#0000CD',outline = '#0000CD')
+
+#left_long_square
+rect21 = c1.create_rectangle(420,240,450,480,fill = '#0000CD',outline = '#0000CD')
+
+#monster
+monster = c1.create_rectangle(270,240,300,270,fill = 'red',outline = 'red',tag = 'monster')
+monster1 = c1.create_rectangle(270,270,300,300,fill = 'pink',outline = 'pink',tag = 'monster')
+monster2 = c1.create_rectangle(300,240,330,270,fill = 'green',outline = 'green',tag = 'monster')
+monster3 = c1.create_rectangle(300,270,330,300,fill = 'white',outline = 'white',tag = 'monster')
+#pacman
+circle = c1.create_arc(270,480,300,510, start = 40, extent = 280, outline = 'yellow', fill = 'yellow', width = 1, tag = 'pacman')
+#balls
+for i in range(18):
+    for j in range(18):
+        if j == 15 and i == 8:
+            continue
+        else:
+            ball = c1.create_oval(40+(30*i),40+(30*j),50+(30*i),50+(30*j),outline = 'gray', fill = 'gray',tag = 'ball')
+            c1.tag_lower('ball')
+
+b = 1
+b1 = 1
+b2 = 1
+b3 = 1
+list_move = []
+list_move.append(c1.coords(monster))
+def check_u_l_r():
+    num_get = randrange(0,3)
+    return num_get
+def check_l_d():
+    num_get = randrange(0,4,3)
+    return num_get
+def check_r_d():
+    num_get = randrange(2,4)
+    return num_get
+def check_l_r():
+    num_get = randrange(0,3,1)
+    return num_get
+def check_l_r_d():
+    num_get = randrange(0,4)
+    if num_get == 1:
+        check_l_r_d()
+    else:
+        return num_get
+def check_u_r_d():
+    num_get = randrange(1,4)
+    return num_get
+
+def check_u_r():
+    num_get = randrange(1,3)
+    return num_get
+def check_u_l():
+    num_get = randrange(0,2)
+    return num_get
+def check_u_l_d():
+    num_get = randrange(0,1,4)
+    if num_get == 2:
+        check_u_l_d()
+    else:
+        return num_get
+
+def go_up1():
+    global monster1
+    c1.move(monster1,0,-10)
+
+def go_left1():
+    global monster1
+    c1.move(monster1,-10,0)
+
+def go_down1():
+    global monster1
+    c1.move(monster1,0,10)
+
+def go_right1():
+    global monster1
+    c1.move(monster1,10,0)
+
+def go_up2():
+    global monster2
+    c1.move(monster2,0,-10)
+
+def go_left2():
+    global monster2
+    c1.move(monster2,-10,0)
+
+def go_down2():
+    global monster2
+    c1.move(monster2,0,10)
+
+def go_right2():
+    global monster2
+    c1.move(monster2,10,0)
+
+def go_up3():
+    global monster3
+    c1.move(monster3,0,-10)
+
+def go_left3():
+    global monster3
+    c1.move(monster3,-10,0)
+
+def go_down3():
+    global monster3
+    c1.move(monster3,0,10)
+
+def go_right3():
+    global monster3
+    c1.move(monster3,10,0)
+
+def go_left():
+    global monster
+    global list_move
+    c1.move(monster,-10,0)
+    if len(list_move)!= 3:
+        list_move.append(c1.coords(monster))
+    else:
+        list_move.pop(0)
+    
+def go_up():
+    global monster
+    global list_move
+    c1.move(monster,0,-10)
+    if len(list_move)!= 3:
+        list_move.append(c1.coords(monster))
+    else:
+        list_move.pop(0)
+
+def go_right():
+    global monster
+    global list_move
+    c1.move(monster,10,0)
+    if len(list_move)!= 3:
+        list_move.append(c1.coords(monster))
+    else:
+        list_move.pop(0)
+    
+def go_down():
+    global monster
+    global list_move
+    c1.move(monster,0,10)
+    if len(list_move)!= 3:
+        list_move.append(c1.coords(monster))
+    else:
+        list_move.pop(0)
+def test(i,j):
+    global b
+    if i == 0:
+        if j == [270,210,300,240] or j == [240,150,270,180] or j == [330,150,360,180] or j == [120,480,150,510] or j == [180,480,210,510] or j == [240,480,270,510] or j == [330,480,360,510] or j == [390,480,420,510] or j == [270,540,300,570] or j == [300,540,330,570] or j == [450,480,480,510]:
+            b = check_u_l_r()
+        elif j == [180,210,210,240] or j == [240,390,270,420] or j == [330,390,360,420] or j == [300,480,330,510] or j == [270,480,300,510] or j ==[390,210,420,240]:
+            b = check_l_r_d()
+        elif j == [180,330,210,360] or j == [120,210,150,240] or j == [180,390,210,420]:
+            b = check_u_r_d()
+        elif j == [300,210,330,240]:
+            b = check_u_l_r()
+        elif j == [270,150,300,180] or j == [300,150,330,180] or j == [180,30,210,60]:
+            b = check_l_r_d()
+        elif j == [180,150,210,180] or j == [30,90,60,120] or j == [30,540,60,570]:
+            b = check_u_r()
+        elif j == [390,150,420,180] or j == [540,90,570,120] or j == [540,540,570,570]:
+            b = check_u_l()
+        elif j == [240,30,270,60] or j == [120,90,150,120] or j == [540,30,570,60] or j == [540,480,570,510]:
+            b = check_l_d()
+        elif j == [330,30,360,60] or j == [30,30,60,60] or j == [450,90,480,120] or j == [30,480,60,510]:
+            b = check_r_d()
+        elif j == [390,390,420,420] or j == [390,330,420,360] or j == [450,210,480,240] or j == [390,390,420,420]:
+            b = check_u_l_d()
+        elif j == [390,30,420,60]:
+            b = 3
+    elif i == 1:
+        if j == [270,210,300,240] or j == [240,150,270,180] or j == [330,150,360,180] or j == [120,480,150,510] or j == [180,480,210,510] or j == [240,480,270,510] or j == [330,480,360,510] or j == [390,480,420,510] or j == [270,540,300,570] or j == [300,540,330,570] or j == [450,480,480,510]:
+            b = check_u_l_r()
+        elif j == [180,210,210,240] or j == [240,390,270,420] or j == [330,390,360,420] or j == [300,480,330,510] or j == [270,480,300,510] or j ==[390,210,420,240]:
+            b = check_l_r_d()
+        elif j == [180,330,210,360] or j == [120,210,150,240] or j == [180,390,210,420]:
+            b = check_u_r_d()
+        elif j == [300,210,330,240]:
+            b = check_u_l_r()
+        elif j == [270,150,300,180] or j == [300,150,330,180] or j == [180,30,210,60]:
+            b = check_l_r_d()
+        elif j == [180,150,210,180] or j == [30,90,60,120] or j == [30,540,60,570]:
+            b = check_u_r()
+        elif j == [390,150,420,180] or j == [540,90,570,120] or j == [540,540,570,570]:
+            b = check_u_l()
+        elif j == [240,30,270,60] or j == [120,90,150,120] or j == [540,30,570,60] or j == [540,480,570,510]:
+            b = check_l_d()
+        elif j == [330,30,360,60] or j == [30,30,60,60] or j == [450,90,480,120] or j == [30,480,60,510]:
+            b = check_r_d()
+        elif j == [390,390,420,420] or j == [390,330,420,360] or j == [450,210,480,240] or j == [390,390,420,420]:
+            b = check_u_l_d()
+        elif j == [390,30,420,60]:
+            b = 3
+    elif i == 2:
+        if j == [270,210,300,240] or j == [240,150,270,180] or j == [330,150,360,180] or j == [120,480,150,510] or j == [180,480,210,510] or j == [240,480,270,510] or j == [330,480,360,510] or j == [390,480,420,510] or j == [270,540,300,570] or j == [300,540,330,570] or j == [450,480,480,510]:
+            b = check_u_l_r()
+        elif j == [180,210,210,240] or j == [240,390,270,420] or j == [330,390,360,420] or j == [300,480,330,510] or j == [270,480,300,510] or j ==[390,210,420,240]:
+            b = check_l_r_d()
+        elif j == [180,330,210,360] or j == [120,210,150,240] or j == [180,390,210,420]:
+            b = check_u_r_d()
+        elif j == [300,210,330,240]:
+            b = check_u_l_r()
+        elif j == [270,150,300,180] or j == [300,150,330,180] or j == [180,30,210,60]:
+            b = check_l_r_d()
+        elif j == [180,150,210,180] or j == [30,90,60,120] or j == [30,540,60,570]:
+            b = check_u_r()
+        elif j == [390,150,420,180] or j == [540,90,570,120] or j == [540,540,570,570]:
+            b = check_u_l()
+        elif j == [240,30,270,60] or j == [120,90,150,120] or j == [540,30,570,60] or j == [540,480,570,510]:
+            b = check_l_d()
+        elif j == [330,30,360,60] or j == [30,30,60,60] or j == [450,90,480,120] or j == [30,480,60,510]:
+            b = check_r_d()
+        elif j == [390,390,420,420] or j == [390,330,420,360] or j == [450,210,480,240] or j == [390,390,420,420]:
+            b = check_u_l_d()
+        elif j == [390,30,420,60]:
+            b = 3
+    elif i == 3:
+        if j == [270,210,300,240] or j == [240,150,270,180] or j == [330,150,360,180] or j == [120,480,150,510] or j == [180,480,210,510] or j == [240,480,270,510] or j == [330,480,360,510] or j == [390,480,420,510] or j == [270,540,300,570] or j == [300,540,330,570] or j == [450,480,480,510]:
+            b = check_u_l_r()
+        elif j == [180,210,210,240] or j == [240,390,270,420] or j == [330,390,360,420] or j == [300,480,330,510] or j == [270,480,300,510] or j ==[390,210,420,240]:
+            b = check_l_r_d()
+        elif j == [180,330,210,360] or j == [120,210,150,240] or j == [180,390,210,420]:
+            b = check_u_r_d()
+        elif j == [300,210,330,240]:
+            b = check_u_l_r()
+        elif j == [270,150,300,180] or j == [300,150,330,180] or j == [180,30,210,60]:
+            b = check_l_r_d()
+        elif j == [180,150,210,180] or j == [30,90,60,120] or j == [30,540,60,570]:
+            b = check_u_r()
+        elif j == [390,150,420,180] or j == [540,90,570,120] or j == [540,540,570,570]:
+            b = check_u_l()
+        elif j == [240,30,270,60] or j == [120,90,150,120] or j == [540,30,570,60] or j == [540,480,570,510]:
+            b = check_l_d()
+        elif j == [330,30,360,60] or j == [30,30,60,60] or j == [450,90,480,120] or j == [30,480,60,510]:
+            b = check_r_d()
+        elif j == [390,390,420,420] or j == [390,330,420,360] or j == [450,210,480,240] or j == [390,390,420,420]:
+            b = check_u_l_d()
+        elif j == [390,30,420,60]:
+            b = 3
+    return (b,i)
+
+def go():
+    global circle
+    global monster
+    global monster1
+    global b
+    global b1
+    global b2
+    global b3
+    global list_move
+    global full_list_coords
+    list_coords = []
+    list_b = []
+    fin = c1.find_withtag('monster')
+    x1,y1,x2,y2 = c1.bbox(circle)
+    overlap = c1.find_overlapping(x1,y1,x2,y2)
+    for i in overlap:
+        if i in fin:
+            text2 = c1.create_text(300,300, text = 'Вы проиграли :(', fill = 'red',tag = 'text2',font="Purisa")
+            c1.tag_raise(text2)
+            root.after(1000,close_)
+    coord = c1.coords(monster)
+    coord1 = c1.coords(monster1)
+    coord2 = c1.coords(monster2)
+    coord3 = c1.coords(monster3)
+    list_coords.append(coord)
+    list_coords.append(coord1)
+    list_coords.append(coord2)
+    list_coords.append(coord3)
+    for i in range(len(list_coords)):
+        if list_coords[i] in full_list_coords:
+            tup = test(i,list_coords[i])
+            list_b.append(tup)
+        else:
+            if i == 0:
+                list_b.append((b,i))
+            elif i == 1:
+                list_b.append((b1,i))
+            elif i == 2:
+                list_b.append((b2,i))
+            elif i == 3:
+                list_b.append((b3,i))
+    for i in list_b:
+        if i[-1] == 0:
+            b = i[0]
+            gob(b)
+        elif i[-1] == 1:
+            b1 = i[0]
+            gob1(b1)
+        elif i[-1] == 2:
+            b2 = i[0]
+            gob2(b2)
+        elif i[-1] == 3:
+            b3 = i[0]
+            gob3(b3)
+    follow()
+    
+def gob(b):
+    if b == 1:
+        go_up()
+    elif b == 0:
+        go_left()
+    elif b == 2:
+        go_right()
+    elif b == 3:
+        go_down()
+
+def gob1(b):
+    if b1 == 1:
+        go_up1()
+    elif b1 == 0:
+        go_left1()
+    elif b1 == 2:
+        go_right1()
+    elif b1 == 3:
+        go_down1()
+
+def gob2(b):
+    if b2 == 1:
+        go_up2()
+    elif b2 == 0:
+        go_left2()
+    elif b2 == 2:
+        go_right2()
+    elif b2 == 3:
+        go_down2()
+
+def gob3(b):
+    if b3 == 1:
+        go_up3()
+    elif b3 == 0:
+        go_left3()
+    elif b3 == 2:
+        go_right3()
+    elif b3 == 3:
+        go_down3()
+
+def follow():
+    root.after(100,go)
+follow()
+
+c1.pack()
+c2.pack()
+root.bind('<Key>', movement)
+root.mainloop()
